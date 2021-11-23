@@ -7,22 +7,31 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <form action="/pagina-processa-dados-do-form" method="post">
+{% block content %}
+     <div class="texto-topo">
+         <h1>Enviar mensagem</h1>
+     </div>
+
+    <hr/>
+    <form method="post">
+        {% csrf_token %}
+
         <div>
             <label for="nome">Nome:</label>
-            <input type="text" id="nome">
+            {{ form.nome }}
         </div>
         <div>
             <label for="email">E-mail:</label>
-            <input type="email" id="email">
+            {{ form.email }}
         </div>
         <div>
             <label for="msg">Mensagem:</label>
-            <textarea id="msg"></textarea>
+            {{ form.msg }}
         </div>
         <div>
             <button type="submit">Enviar sua mensagem</button>
         </div>
     </form>
+{% endblock %}
 </body>
 </html>
