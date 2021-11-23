@@ -1,3 +1,7 @@
+.texto-topo {
+    text-align: center;
+}
+
 form {
     /* Apenas para centralizar o form na página */
     margin: 0 auto;
@@ -54,6 +58,7 @@ textarea {
 .button {
     /* Para posicionar os botões para a mesma posição dos campos de texto */
     padding-left: 90px;
+
 }
 
 button {
